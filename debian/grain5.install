@@ -1,0 +1,10 @@
+out/robot2_rel/object_tracer/*.py       /reco5/object_tracer
+
+out/robot2_rel/object_tracer/api        /reco5/object_tracer
+out/robot2_rel/object_tracer/config     /reco5/object_tracer
+out/robot2_rel/object_tracer/core       /reco5/object_tracer
+out/robot2_rel/object_tracer/env        /reco5/object_tracer
+out/robot2_rel/object_tracer/libs       /reco5/object_tracer
+out/robot2_rel/object_tracer/platform   /reco5/object_tracer
+out/robot2_rel/object_tracer/services   /reco5/object_tracer
+out/robot2_rel/object_tracer/utils      /reco5/object_tracer

@@ -1,0 +1,29 @@
+Source: grain5
+Section: misc
+Priority: extra
+Maintainer: Chengcheng Lee <chengcheng.lee@aeolusbot.com>
+Build-Depends: ros-kinetic-opencv3, libopencv-dev, libopenblas-dev, debhelper (>=9), cython
+Standards-Version: 3.9.6
+Homepage: none
+
+Package: grain5-data
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: this include default registered dataset used by grain5
+
+Package: grain5-model
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: thie include trained model of grain5
+
+Package: grain5
+Section: libdevel
+Architecture: any
+Depends: grain5-data (= ${binary:Version}), 
+         grain5-model (= ${binary:Version}),
+         ${misc:Depends}, ${shlibs:Depends}, libprotobuf-dev, libgoogle-glog-dev,
+         libgflags-dev, libhdf5-cpp-11, libleveldb-dev, liblmdb-dev, libsnappy-dev, python-skimage,
+         python-protobuf
+Description: this include all grain5 library
