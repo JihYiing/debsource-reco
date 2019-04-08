@@ -1,14 +1,20 @@
-grain5 (20190411-aeolus1) UNRELEASED; urgency=low
+grain5 (20190407-aeolus2) UNRELEASED; urgency=low
+
+  * Use caffe network in dlf for this version
+
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Wed, 06 Mar 2018 17:30:00 +0800
+
+grain5 (20190306-aeolus2) UNRELEASED; urgency=low
+
+  * Use caffe network in dlf for this version
+
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Wed, 06 Mar 2018 17:30:00 +0800
+
+grain5 (20190222-aeolus2) UNRELEASED; urgency=low
 
   * Implement new reco api and dlf framework
 
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Thu, 21 Feb 2018 17:30:00 +0800
- 
-grain5 (20190221-aeolus1) UNRELEASED; urgency=low
-
-  * Implement new reco api and dlf framework
-
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Thu, 21 Feb 2018 17:30:00 +0800
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Fri, 22 Feb 2018 14:30:00 +0800
 
 grain5 (20190214-aeolus1) UNRELEASED; urgency=low
 
