@@ -28,9 +28,6 @@ podTemplate(label: label,
                         sh ''' git clone --depth=1 --branch dlf_release_tag_v2.1.3.19.04.01 https://"$GITHUB_ACCOUNT":"$GITHUB_PASSWORD"@github.com/aeolusbot/deep_learning_framework.git dlf_source'''   
                         sh 'cd dlf_source && git lfs pull '
                     }         
-                    //dir('dlf_source') {
-                    //    git changelog: false, credentialsId: '93cd491a-412b-41dd-b613-891fc6bd8a88', poll: false, url: 'https://github.com/aeolusbot/deep_learning_framework.git'
-                    //}
                     sh 'ls -al dlf_source'
                 }
                 stage('Setup DLF'){
@@ -56,8 +53,6 @@ podTemplate(label: label,
                     
                 }            
                 stage('Build Debsource'){
-                    //sh 'sleep 8h'
-                   
                     //sh 'cp -r dlf_source/inference/model/caffe debsource-reco/deep_learning_framework/inference/model/'
                     //sh 'cp -r dlf_source/inference/model/torch debsource-reco/deep_learning_framework/inference/model/'
                     sh 'cp -r dlf_source/release debsource-reco/deep_learning_framework/'
@@ -67,12 +62,11 @@ podTemplate(label: label,
                     sh 'cp -r /mnt/grain5-dataset/Aeolus_ModelDataset/Object_tracer/model/pd_clf_model/* debsource-reco/model/pd_clf_model/'
                     sh 'cp -r /mnt/grain5-dataset/Aeolus_ModelDataset/Object_tracer/model/reid/* debsource-reco/model/reid/'
                     dir("debsource-reco") {
-                        //sh '''sed -i \'s/20190221/'''+"$Release_Date"+'''/g\' debian/files'''
-                        //sh 'wget http://192.168.15.33:8889/files/jenkins/copy_model.py'
-                        sh '''sed -i \'s/None/"general"/g\' object_tracer/config/config_ot.py'''
+                        sh '''sed -i \'s/CONFIG_OBJECT_DETECTION_MODE = None/CONFIG_OBJECT_DETECTION_MODE = "general"/g\' object_tracer/config/config_ot.py'''
+                        sh 'cd ../dlf_source && . ./script/env.sh &&cd ../debsource-reco/object_tracer && . ./env/g5_ot_robot2_rel.sh && cd .. && python copy_model.py'
+                        sh '''sed -i \'s/CONFIG_OBJECT_DETECTION_MODE = "general"/CONFIG_OBJECT_DETECTION_MODE = "task"/g\' object_tracer/config/config_ot.py'''
                         sh 'cd ../dlf_source && . ./script/env.sh &&cd ../debsource-reco/object_tracer && . ./env/g5_ot_robot2_rel.sh && cd .. && python copy_model.py'
                         sh 'touch deep_learning_framework/release/trt_model.so && rosdep init && rosdep update'
-                        //sh 'sleep 8h'
                         sh 'chmod 755 build.bash && ./build.bash'
                         sh 'cp *.deb /mnt/jenkins/debsource/'
                         sh 'cp *.deb /mnt/upload/colinkao/dqa_sys_package'
