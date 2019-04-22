@@ -33,7 +33,6 @@ podTemplate(label: label,
                 stage('Setup DLF'){
                     sh 'apt-get update && apt-get install -y nuitka '
                     dir('dlf_source') {
-                        sh 'wget http://192.168.15.33:8889/files/jenkins/setup.sh -O script/setup.sh && chmod 755 script/setup.sh'
                         sh '''sed -i \'s/DLF_TENSORRT_ENABLE = True/DLF_TENSORRT_ENABLE = False/g\' dlf_config.py'''
                         sh '''sed -i \'s/DLF_TENSORFLOW_ENABLE = True/DLF_TENSORFLOW_ENABLE = False/g\' dlf_config.py'''
                         sh 'cat dlf_config.py'
@@ -53,8 +52,6 @@ podTemplate(label: label,
                     
                 }            
                 stage('Build Debsource'){
-                    //sh 'cp -r dlf_source/inference/model/caffe debsource-reco/deep_learning_framework/inference/model/'
-                    //sh 'cp -r dlf_source/inference/model/torch debsource-reco/deep_learning_framework/inference/model/'
                     sh 'cp -r dlf_source/release debsource-reco/deep_learning_framework/'
                     sh 'cp -r /mnt/grain5-dataset/Aeolus_ModelDataset/Object_tracer/model/feature_extraction/*.npy debsource-reco/model/feature_extraction/'
                     sh 'cp -r /mnt/grain5-dataset/Aeolus_ModelDataset/Object_tracer/model/tree/released_tree/* debsource-reco/model/tree/released_tree/'
