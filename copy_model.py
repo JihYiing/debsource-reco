@@ -4,10 +4,10 @@ import shutil
 
 
 parent_path=os.path.dirname(os.path.realpath(__file__))
-dlf_source = os.path.dirname(parent_path)+"/object_tracer/libs/dlf/inference/model"
+dlf_source = os.path.dirname(parent_path)+"/debsource-reco/object_tracer/libs/dlf/inference/model"
 
 print FUNC2MODEL
-output = parent_path+"/model"
+output = parent_path+"/model/dlf"
 print dlf_source
 for key in FUNC2MODEL:
     framework = FUNC2MODEL[key][0]
