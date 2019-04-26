@@ -1,11 +1,8 @@
 #!/bin/bash
 
-cd object_tracer
-source env/g5_ot_robot2_rel.sh
-#sudo mkdir -p /mnt/grain5-dataset/Aeolus_ModelDataset/Object_tracer/model
-#sudo cp -a ../model/* /mnt/grain5-dataset/Aeolus_ModelDataset/Object_tracer/model
-cp -a ../deep_learning_framework $HOME
-
+cd object_tracer/env
+source g5_ot_robot2_rel.sh
+cd ..
 
 ln -s ../debian
 sudo apt-get update
