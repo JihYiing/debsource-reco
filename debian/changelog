@@ -1,33 +1,40 @@
+grain5 (20190426-aeolus2) UNRELEASED; urgency=low
+
+  * Remove socket protocal inside object tracer
+  * Implement new API g5ot_posture_seq
+
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Fri, 26 Apr 2019 14:00:00 +0800
+ 
 grain5 (20190407-aeolus2) UNRELEASED; urgency=low
 
   * Use caffe network in dlf for this version
 
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Wed, 06 Mar 2018 17:30:00 +0800
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Wed, 06 Mar 2019 17:30:00 +0800
 
 grain5 (20190306-aeolus2) UNRELEASED; urgency=low
 
   * Use caffe network in dlf for this version
 
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Wed, 06 Mar 2018 17:30:00 +0800
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Wed, 06 Mar 2019 17:30:00 +0800
 
 grain5 (20190222-aeolus2) UNRELEASED; urgency=low
 
   * Implement new reco api and dlf framework
 
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Fri, 22 Feb 2018 14:30:00 +0800
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Fri, 22 Feb 2019 14:30:00 +0800
 
 grain5 (20190214-aeolus1) UNRELEASED; urgency=low
 
   * Add our search path in PYTHONPATH to be the first position
 
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Thu, 14 Feb 2018 09:30:00 +0800
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Thu, 14 Feb 2019 09:30:00 +0800
 
 grain5 (20190114-aeolus1) UNRELEASED; urgency=low
 
   * Update default tree
   * change default permission for log and frames folder
 
- -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Mon, 14 Jan 2018 12:10:00 +0800
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Mon, 14 Jan 2019 12:10:00 +0800
 
 grain5 (20181207-aeolus1) UNRELEASED; urgency=low
 
