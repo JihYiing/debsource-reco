@@ -1,3 +1,10 @@
+grain5 (20190509-aeolus2) UNRELEASED; urgency=low
+
+  * Not set CPLUS_INCLUDE_PATH which is not used for reco recognition
+  * Improve performance of of person down detection
+
+ -- Chengcheng Lee <chengcheng.lee@aeolusbot.com>  Thr, 09 May 2019 10:10:00 +0800
+ 
 grain5 (20190426-aeolus2) UNRELEASED; urgency=low
 
   * Remove socket protocal inside object tracer
