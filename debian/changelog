@@ -1,3 +1,11 @@
+grain5 (20190625-aeolus2) UNRELEASED; urgency=low
+
+  * Output segmentation confidence scores
+  * Change face pre-register (replace Duncan and Esther by eddie and yummieezd)
+  * Change person api
+
+ -- cc chu <cc.chu@aeolusbot.com>  Thu, 28 June 2019 10:10:00 +0800
+ 
 grain5 (20190509-aeolus2) UNRELEASED; urgency=low
 
   * Not set CPLUS_INCLUDE_PATH which is not used for reco recognition
