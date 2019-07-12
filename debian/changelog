@@ -1,3 +1,10 @@
+grain5 (20190719-aeolus2) UNRELEASED; urgency=low
+
+  * add tracking api
+  * add socket for tensorflow usage
+
+ -- cc chu <cc.chu@aeolusbot.com>  Thu, 12 Jul 2019 16:50:00 +0800
+ 
 grain5 (20190625-aeolus2) UNRELEASED; urgency=low
 
   * Output segmentation confidence scores
