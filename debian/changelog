@@ -1,6 +1,6 @@
 grain5 (20190812-aeolus2) UNRELEASED; urgency=low
 
-  * update face kernel and decision model
+  * update face kernel, decision model, and tree
 
  -- cc chu <cc.chu@aeolusbot.com>  Thu, 20 Aug 2019 10:50:00 +0800
  
