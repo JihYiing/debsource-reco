@@ -1,3 +1,9 @@
+grain5 (20190812-aeolus2) UNRELEASED; urgency=low
+
+  * update face kernel and decision model
+
+ -- cc chu <cc.chu@aeolusbot.com>  Thu, 20 Aug 2019 10:50:00 +0800
+ 
 grain5 (20190719-aeolus2) UNRELEASED; urgency=low
 
   * add tracking api
